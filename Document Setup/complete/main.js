@@ -57,7 +57,7 @@ $(document).ready(function()
 	        async: true,
 	        dataType: "text",
 	        success: function (data, status,xhr) {
-	            if (!xhr.responseText == null)
+	            if (!xhr.responseText)
 	            	return; 
 
                 uEditObject().updateProgressTitle("Setting up uEdit...");
