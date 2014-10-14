@@ -1,0 +1,14 @@
+.UEdit-rotate-proxy
+{
+    cursor: url('./uEdit/uEdit/output/images/rotate.cur'),url('../images/rotate.cur'), all-scroll;  
+}
+
+.UEdit-link-state
+{
+    cursor: url('./uEdit/uEdit/output/images/link.cur'),url('../images/link.cur'), alias;  
+}
+
+.UEdit-locked
+{
+    cursor: url('./uEdit/uEdit/output/images/lock.cur'),url('../images/lock.cur'), alias;  
+}
