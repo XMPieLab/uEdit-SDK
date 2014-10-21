@@ -162,7 +162,7 @@ $(document).ready(function()
     		$('#btn-undo').attr('disabled','true');
     });
 
-    // undo
+    // redo
     $('#btn-redo').click(function()
     {
         uEditObject().getUndoService().redo();
