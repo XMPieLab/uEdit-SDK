@@ -1,0 +1,46 @@
+.UEdit-rotate-proxy
+{
+    cursor: url('./uEdit/uEdit/output/images/rotate.cur'),url('../images/rotate.cur'), all-scroll;  
+}
+
+.UEdit-link-state
+{
+    cursor: url('./uEdit/uEdit/output/images/link.cur'),url('../images/link.cur'), alias;  
+}
+
+.UEdit-locked
+{
+    cursor: url('./uEdit/uEdit/output/images/lock.cur'),url('../images/lock.cur'), alias;  
+}
+
+
+.btn-img-disable>.img-disabled
+{
+	display:none;
+}
+
+.btn-img-disable[disabled]>.img-enabled
+{
+	display:none;
+}
+
+.btn-img-disable[disabled]>.img-disabled
+{
+	display:inherit;
+}
+
+
+.btn-img-toggle>.img-off
+{
+	display:none;
+}
+
+.btn-img-off>.img-on
+{
+	display:none;
+}
+
+.btn-img-off>.img-off
+{
+	display:inherit;
+}
