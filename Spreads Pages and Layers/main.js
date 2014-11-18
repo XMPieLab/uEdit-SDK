@@ -326,6 +326,30 @@ $(document).ready(function()
     	uEditObject().showPreviewValues();
 	});
 
+    $('#btn-add-page').click(function()
+    {
+		var theDocument = uEditObject().getDocument();
+
+        uEditObject().getUndoService().pushUndoTransaction('add page');
+
+        // create a page and a container spread
+		var newSpread = new UEditSpread();
+		newSpread.insertPage(new UEditPage(),0);
+
+
+		// get the current page index
+		var currentPageIndex = uEditObject().getActualPageInView();
+
+		// insert the spread after the spread of the current page
+		theDocument.insertSpread(newSpread,theDocument.spreads.indexOf(theDocument.getPages()[currentPageIndex].parent)+1);
+
+		// finalize undo transaction
+        uEditObject().getUndoService().popUndoTransaction();
+
+		// move the application view to the new page
+        uEditObject().goToActualPage(currentPageIndex+1);
+
+    });
 
     $('#btn-add-text-box').click(function(){
 		var uEdit = uEditObject();
