@@ -330,8 +330,6 @@ $(document).ready(function()
     {
 		var theDocument = uEditObject().getDocument();
 
-        uEditObject().getUndoService().pushUndoTransaction('add page');
-
         // create a page and a container spread
 		var newSpread = new UEditSpread();
 		newSpread.insertPage(new UEditPage(),0);
@@ -342,9 +340,6 @@ $(document).ready(function()
 
 		// insert the spread after the spread of the current page
 		theDocument.insertSpread(newSpread,theDocument.spreads.indexOf(theDocument.getPages()[currentPageIndex].parent)+1);
-
-		// finalize undo transaction
-        uEditObject().getUndoService().popUndoTransaction();
 
 		// move the application view to the new page
         uEditObject().goToActualPage(currentPageIndex+1);
